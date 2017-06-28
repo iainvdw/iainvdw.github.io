@@ -1,3 +1,8 @@
+# Compiled assets
+public/assets/css
+public/assets/js
+public/assets/svg
+
 # Logs
 logs
 *.log
@@ -56,4 +61,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
