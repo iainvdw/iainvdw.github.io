@@ -1,41 +1,39 @@
-# Complexity in CSS
+# Complexity in CSS (and how to avoid it)
 
-Probably everyone who has worked with CSS, ran into one of several possible issues you could have with CSS. The issues could be caused by high selector specificity, overuse of `!important`, conflicts in source order, etc. Some developers have even come to hate CSS because of these issues. Or even blame the cascade for all of their problems, which is what defines how CSS works. After all, CSS does stand for "Cascading Style Sheets".
+Probably everyone who has worked with CSS, ran into one of several possible issues you could have with CSS. The issues could be caused by high selector specificity, overuse of `!important`, conflicts in source order, or some other issue. Some developers have even come to hate CSS because of these issues. Or even blame "the cascade" (which is what defines how CSS works) and try to circumvent it. After all, CSS does stand for "Cascading Style Sheets".
 
-But are these issues really caused by CSS itself? Or by the way we're writing CSS? I believe we're creating or own problems and should be looking at our own code first, instead of the technology.
+But are these issues really caused by CSS itself? Or by the way we're writing CSS? I believe we're creating our own problems and should be looking at our own code instead of the technology.
 
 ## CSS is simple
-Anybody can start learning CSS. It's quite easy to pick up, the learning curve is not too steep and you can start on anything you'd like, be it font styling, layout or even animations. There's a couple of things you need to know in CSS, like what selectors, properties and values are. They're concepts that aren't hard to grasp, and once you know what they are, you can start writing CSS!
+Anybody can start learning CSS. It's quite easy to pick up, the learning curve is not too steep and you can start on anything you'd like, be it font styling, layout or even animations. There's a couple of things you need to know in CSS, like selectors, properties and their values. They're concepts that aren't that hard to grasp, and once you know what they are, you can start writing CSS!
 
 ***But...***
 
 ## It isn't easy
 
-Let me start with this quote:
+Let me start with this quote by Jeremy Keith from his post ["CSS"](https://adactio.com/journal/12571)
 
 > [CSS] is simple in the sense of “not complex”, but that doesn’t mean it’s easy. Mistaking “simple” for “easy” will only lead to heartache.
 > 
 > [...]
 > 
 > I can’t help but think that they would be less frustrated if they would accept that CSS is not easy. Simple, yes, but not easy. Using CSS at scale has a learning curve, just like any powerful technology. The way to deal with that is not to hammer the technology into a different shape, but to get to know it, understand it, and respect it.
-> 
-> — Jeremy Keith, in his post ["CSS"](https://adactio.com/journal/12571) on July 18th, 2017
 
-Like Jeremy Keith is saying, architecting CSS at scale can be quite a challenge as you might run into the issues mentioned earlier. Learning what each part of the cascade (specifity, inheritance, source order, etc.) does and how it affects the elements on a page, can be quite challenging.
+Like Jeremy Keith is saying, architecting CSS at scale can be quite a challenge as you might run into the issues mentioned earlier. Learning what each part of the cascade does (specificity, inheritance, source order, etc.) and how it affects the elements on a page, can become quite a challenge.
 
 But I've come to believe there _is_ a way of writing maintainable, structured and scalable CSS without running into any of the major issues listed above. Basically, all of the problems named above (and their solutions) boil down to one thing: structure.
 
 ## Structure
 My current setup for CSS structure is a combination of these technologies and methodologies:
 
-* A preprocessor, like LESS or Sass
+* A preprocessor (like LESS or Sass)
 * ITCSS
 * BEM
 * OOCSS (in the form of mixins)
 
-Each layer in this stack gives me the "power" to finetune the structure of my CSS. Control over pieces of the CSS's cascade even. I'll elaborate what advantages (and disadvantages) each layer brings in a bit, but first let me explain all these abbreviations.
+Each layer in this stack gives me the "power" to finetune the structure of my CSS. Control over parts of CSS's cascade even. I'll elaborate what advantages (and disadvantages) each layer brings in a bit, but first let me explain all these abbreviations.
 
-**ITCSS** is short for Inverted Triangle CSS. It was coined by Harry Roberts of CSS Wizardry a couple of years ago. ITCSS is a methodology that dictates how your stylesheet is structured, in the way of ordering your CSS by increasing specificity.
+**ITCSS** is short for Inverted Triangle CSS. It was coined by Harry Roberts of [CSS Wizardry](https://www.csswizardry.com) a couple of years ago. ITCSS is a methodology that dictates how your stylesheet is structured, in the way of ordering your CSS by increasing reach and specificity.
 
 The second one, **BEM**, is an abbreviation for Block, Element, Modifier. This methodology defines how you should group or "namespace" your selectors together to form the standalone styling for a component.
 
