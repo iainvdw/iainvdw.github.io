@@ -27,15 +27,19 @@ const cleansass = (done) => {
   done();
 };
 
-const compilesass = () => {
-  return (
+const compilesass = () => (
     gulp
-      .src([`${conf.path.source + conf.path.assets + conf.path.css}/styles.scss`])
+      .src([
+        `${conf.path.source + conf.path.assets + conf.path.css}/styles.scss`,
+        `${conf.path.source + conf.path.assets + conf.path.css}/cv.scss`
+      ])
       .pipe(handleError('sass', 'SASS compiling failed'))
       .pipe(gulpif(debug, sourcemaps.init()))
-      .pipe(sass().on('error', (err) => {
-        console.log(err.messageFormatted);
-      }))
+      .pipe(
+        sass().on('error', (err) => {
+          console.log(err.messageFormatted);
+        })
+      )
       .pipe(
         cleanCSS({
           level: debug ? 0 : 2
@@ -58,7 +62,6 @@ const compilesass = () => {
 
       .pipe(handleSuccess('sass', 'SASS compiling succeeded'))
   );
-};
 
 const sassTask = gulp.series(compilesass);
 
@@ -66,4 +69,8 @@ gulp.task('sass', sassTask);
 
 tasker.addTask('default', sassTask);
 tasker.addTask('deploy', sassTask);
-tasker.addTask('watch', sassTask, `${conf.path.source + conf.path.assets + conf.path.css}/**/*.scss`);
+tasker.addTask(
+  'watch',
+  sassTask,
+  `${conf.path.source + conf.path.assets + conf.path.css}/**/*.scss`
+);
