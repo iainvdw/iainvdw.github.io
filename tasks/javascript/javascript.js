@@ -23,7 +23,6 @@ const jsFiles = ['app.js'];
 const jsPath = `${conf.path.public + conf.path.assets + conf.path.js}`;
 const debug = process.env.NODE_ENV !== 'production';
 
-
 const cleanjs = (done) => {
   del([`${jsPath}/*`]);
 
@@ -31,50 +30,54 @@ const cleanjs = (done) => {
 };
 
 const js = (allDone) => {
-  async.each(jsFiles, (file, jsDone) => {
-    // set up the browserify instance on a task basis
-    const b = browserify({
-      entries: `${conf.path.source + conf.path.assets + conf.path.js}/${file}`,
-      debug
-    });
+  async.each(
+    jsFiles,
+    (file, jsDone) => {
+      // set up the browserify instance on a task basis
+      const b = browserify({
+        entries: `${conf.path.source + conf.path.assets + conf.path.js}/${file}`,
+        debug
+      });
 
-    // See .babelrc for config
-    b.transform('babelify')
-      .bundle()
-      .on('error', notify.onError(err => ({
-        title: 'js',
-        message: `Error: ${err.annotated
-            ? err.annotated
-            : err.message
-              ? err.message
-              : err}`
-      })))
-      .pipe(source(file))
-      .pipe(buffer())
-      .pipe(gulpif(!debug, uglify()))
+      // See .babelrc for config
+      b
+        .transform('babelify')
+        .bundle()
+        .on(
+          'error',
+          notify.onError(err => ({
+            title: 'js',
+            message: `Error: ${err.annotated ? err.annotated : err.message ? err.message : err}`
+          }))
+        )
+        .pipe(source(file))
+        .pipe(buffer())
+        .pipe(gulpif(!debug, uglify()))
 
-      // Normal output
-      .pipe(gulp.dest(jsPath))
+        // Normal output
+        .pipe(gulp.dest(jsPath))
 
-      // Revisioned output
-      // .pipe(rev())
-      // .pipe(gulp.dest(jsPath))
-      // .pipe(rev.manifest())
-      // .pipe(gulp.dest(jsPath))
+        // Revisioned output
+        // .pipe(rev())
+        // .pipe(gulp.dest(jsPath))
+        // .pipe(rev.manifest())
+        // .pipe(gulp.dest(jsPath))
 
-      .pipe(handleSuccess('js', `JS build succeeded for ${file}`, jsDone()));
-  }, (err) => {
-    if (err) {
-      console.error(err);
+        .pipe(handleSuccess('js', `JS build succeeded for ${file}`, jsDone()));
+    },
+    (err) => {
+      if (err) {
+        console.error(err);
+      }
+
+      allDone();
     }
-
-    allDone();
-  });
+  );
 };
 
 const jsTask = gulp.series(js);
 
 gulp.task('js', jsTask);
 
-tasker.addTask('default', jsTask);
-tasker.addTask('watch', jsTask, [`${conf.path.source + conf.path.assets + conf.path.js}/**/*.js`]);
+// tasker.addTask('default', jsTask);
+// tasker.addTask('watch', jsTask, [`${conf.path.source + conf.path.assets + conf.path.js}/**/*.js`]);
