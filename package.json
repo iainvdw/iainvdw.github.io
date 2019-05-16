@@ -1,7 +1,7 @@
 {
-  "name": "tilburg-university",
+  "name": "iainvanderwiel.nl",
   "version": "1.0.0",
-  "description": "TIU Front-end + Pattern Lab",
+  "description": "",
   "author": "Iain van der Wiel <iain@e-sites.nl>",
   "readme": "README.md",
   "license": "MIT",
@@ -9,14 +9,6 @@
     "last 2 versions",
     ">=1%"
   ],
-  "scripts": {
-    "assets:build": "gulp",
-    "assets:watch": "gulp watch",
-    "patternlab:generate": "php core/console --generate",
-    "patternlab:serve": "php core/console --server --with-watch -p",
-    "generate": "npm run assets:build && npm run patternlab:generate",
-    "start": "npm-run-parallel patternlab:serve assets:watch"
-  },
   "dependencies": {
     "async": "^2.1.4",
     "babel-eslint": "^7.1.1",
