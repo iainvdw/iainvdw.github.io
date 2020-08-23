@@ -4,66 +4,128 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Iain van der Wiel – Front-end developer</title>
-    <meta
-      name="description"
-      content="Website of Iain van der Wiel, front-end developer from The Netherlands."
-    />
-    <meta name="theme-color" content="#d4b16a" />
+    <meta name="description" content="Website of Iain van der Wiel, front-end developer from The Netherlands." />
+    <meta name="theme-color" content="#170f3c" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/cv.css" />
   </head>
 
   <body>
-    <main class="main">
+    <header class="header">
+      <div class="center-grid">
+        <img
+          srcset="assets/img/iain-low.jpg 720w, assets/img/iain-med.jpg 1280w, assets/img/iain-hi.jpg 2048w"
+          alt="Iain van der Wiel working at an office"
+          class="header__image"
+        />
+        <h1>Curriculum vitae</h1>
+      </div>
+    </header>
+    <main class="main center-grid">
       <div class="inner">
-        <h1>Curriculum vitae of Iain van der Wiel</h1>
-        <h2>About me</h2>
-        <img src="assets/img/iain.jpg" alt="Iain van der Wiel" class="photo" />
-        <p>
-          Hi! My name is Iain van der Wiel, 34 years old and I live in Oosterhout, The Netherlands.
-        </p>
-        <p>I am married to Margot since 2014 and I have one daughter, Esmée.</p>
-        <p>
-          Currently I am a senior front end web developer at
-          <a href="https://www.frontmen.nl" target="_blank" rel="noopener">Frontmen</a>
-          in Eindhoven, The Netherlands. I'm very passionate about the web, the possibilities it
-          brings and making it accessible for anyone, anywhere.
-        </p>
-        <h2>Professional experience</h2>
+        <div class="intro">
+          <div class="intro__inner">
+            <h2>About me</h2>
+            <p>
+              Hi! My name is Iain van der Wiel, 35 years old and I live in Oosterhout, The Netherlands.
+            </p>
+            <p>
+              Husband of Margot, father of Esmée and buddy of our labrador Luna.
+            </p>
+            <p>
+              Passionate about user experience and accessibility, I write HTML, CSS and JavaScript to build great
+              websites and applications.
+            </p>
+          </div>
+        </div>
+        <h3>Professional experience</h3>
         <ul>
           <li>
-            Senior Front end web developer at Frontmen in Eindhoven, from November 2018 til present.
-            Worked for the following client(s):
+            <p>
+              Senior frontend engineer and consultant at
+              <a href="https://www.frontmen.nl" target="_blank" rel="noopener">Frontmen</a> in Eindhoven, from November
+              2018 til present. Worked for the following client(s):
+            </p>
             <ul>
               <li>
-                VONQ in Rotterdam - from November 2018 til present. Continued development of a React
-                application where clients can order job marketing campaigns and view campaign
-                analytics.<br />
-                Stack: React, Redux, React Router, Recharts, Webpack, Jest, Enzyme, Docker
+                <p>
+                  Port of Rotterdam/PortXchange in Rotterdam - from July 2019 until present.
+                </p>
+                <p>
+                  Continued development of main Pronto application for optimising ship port calls in various ports
+                  around the world. Large focus on data clarity, presenting a lot of valuable information to a large
+                  user base. Expanded several existing features and developed entire new features in a large code base.
+                </p>
+                <p>
+                  Did a complete redevelopment of the UI of the Vessel Planner application to improve UX, accessibility
+                  and code quality. Also wrote an entire integration test suite to improve upon an untested code base,
+                  bringing the code coverage to ~60% in the first iteration.
+                </p>
+                <p>
+                  Also did maintenance and development on several assisting tools and applications for both internal and
+                  external use.
+                </p>
+                <p>
+                  Stack: TypeScript, fp-ts, React, Redux, React Router, create-react-app, Jest, React Testing Library,
+                  Enzyme, Heroku, Auth0, CircleCI
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  VONQ in Rotterdam - from November 2018 until July 2019.
+                </p>
+                <p>
+                  Continued development of a React application where clients can order job marketing campaigns and view
+                  campaign analytics.
+                </p>
+                <p>
+                  Stack: React, Redux, React Router, Recharts, Webpack, Jest, Enzyme, Docker, Jenkins
+                </p>
               </li>
             </ul>
           </li>
           <li>
-            Front end web developer at E-sites in Breda, from March 2013 til October 2018. Promoted
-            to Senior front end web developer in 2016
-            <br />
-            Stack: PHP, Symfony, Twig, React, Redux, React Router, Gatsby, GraphQL, Jest, Mocha,
-            Chai, Istanbul, Angular.js, jQuery
+            <p>
+              Senior frontend developer at E-sites in Breda, from March 2013 til October 2018.
+            </p>
+            <p>
+              Worked on websites and applications for smaller and larger clients with greatly varying requirements per
+              project. <br />
+              Took the lead in improving and automating a lot of the developer workflow.
+            </p>
+            <p>
+              Organized periodic frontend meetings to discuss projects, improve collaboration and share knowledge.
+            </p>
+            <p>
+              Stack: PHP, Symfony, Twig, React, Redux, React Router, Gatsby, GraphQL, Jest, Mocha, Chai, Istanbul,
+              Angular.js, jQuery, Jenkins
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Frontend developer at Estate in Tilburg, from March 2011 to February 2013
+            </p>
+            <p>
+              Stack: ASP.Net, Sitecore, Sitefinity, jQuery
+            </p>
           </li>
           <li>
-            Front end web developer at Estate in Tilburg, from March 2011 to February 2013
-            <br />
-            Stack: ASP.Net, Sitecore, Sitefinity, jQuery
+            <p>
+              Web developer and designer at Tirato in Drunen, from August 2008 to February 2011
+            </p>
+            <p>
+              Stack: PHP, Silverstripe, WordPress, jQuery
+            </p>
           </li>
           <li>
-            Web developer and designer at Tirato in Drunen, from August 2008 to February 2011<br />
-            Stack: PHP, Silverstripe, WordPress, jQuery
-          </li>
-          <li>
-            DTP and web design at Reach Strategische Communcatie, from February 2008 to August 2008
+            <p>
+              DTP and web design at Reach Strategische Communcatie, from February 2008 to August 2008
+            </p>
           </li>
         </ul>
-        <h2>Courses and trainings</h2>
+        <h3>Courses and trainings</h3>
         <ul>
           <li>CSS Grid course by Wes Bos, in 2018</li>
           <li>ES6.io course by Wes Bos, in 2017</li>
@@ -75,32 +137,39 @@
           <li>Drupal 7 training by Merge, in 2014</li>
           <li>Effective communication by MXF Bedrijfspsychologie, in 2010</li>
         </ul>
-        <h2>Miscellaneous experience</h2>
+        <h3>Core experience</h3>
         <ul>
           <li>HTML5, senior level</li>
           <li>CSS3, Sass and LESS, senior level</li>
           <li>JavaScript, senior level</li>
-          <li>jQuery, senior level</li>
-          <li>Twig, Handlebars and Mustache template engines, senior level</li>
-          <li>Gulp.js task runner, senior level</li>
-          <li>React.js, senior level</li>
+          <li>TypeScript, intermediate level</li>
           <li>SVG, intermediate level</li>
-          <li>Kunstmaan (Symfony based) CMS, intermediate level</li>
-          <li>WordPress, intermediate level</li>
+        </ul>
+
+        <h3>Tools, libraries and frameworks</h3>
+        <ul>
+          <li>React, senior level</li>
+          <li>Webpack, intermediate level</li>
           <li>Node.js, intermediate level</li>
           <li>Angular.js, beginner level</li>
           <li>Angular 2+, beginner level</li>
+          <li>jQuery, senior level</li>
+          <li>Gulp.js task runner, senior level</li>
+          <li>Kunstmaan (Symfony based) CMS, intermediate level</li>
+          <li>WordPress, intermediate level</li>
+          <li>Twig, Handlebars and Mustache template engines, senior level</li>
           <li>Symfony framework, beginner level</li>
         </ul>
-        <h2>Education</h2>
+        <h3>Education</h3>
         <ul>
           <li>
-            MBO Multimedia and Design at ROC Zoomvliet College Roosendaal, from 2004 to 2007.
-            Acquired diploma.
+            MBO Multimedia and Design at ROC Zoomvliet College Roosendaal, from 2004 to 2007. Acquired diploma.
           </li>
           <li>HBO ICT at Hogeschool 's Hertogenbosch, from 2003 to 2004.</li>
           <li>HBO ICT at Hogeschool Breda, from 2002 to 2003.</li>
-          <li>HAVO Natuur &amp; Techniek at KSE Etten-Leur, from 1997 to 2002</li>
+          <li>
+            HAVO Natuur &amp; Techniek at KSE Etten-Leur, from 1997 to 2002
+          </li>
         </ul>
       </div>
     </main>
