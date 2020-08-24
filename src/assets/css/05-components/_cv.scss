@@ -32,17 +32,26 @@ ul {
 .main {
   position: relative;
   z-index: 10;
-  margin-top: 5vmin;
-  fill: $color-primary;
+  color: $color-light;
+  fill: $color-light;
 
   @include media($md-up) {
+    margin-top: 5vmin;
     font-size: $font-size-large;
   }
 }
 
 .intro {
+  border: $spacing-base solid transparent;
   padding: 2vw;
+  min-width: 50vw;
   background: $color-primary-accent;
+
+  @include media($sm-down) {
+    margin-top: -$spacing-base;
+    margin-left: -$spacing-base;
+    margin-right: -$spacing-base;
+  }
 }
 
 .intro__inner {
