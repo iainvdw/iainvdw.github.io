@@ -2,6 +2,16 @@ body {
   background: $color-primary;
 }
 
+.hi {
+  font-size: 4rem;
+}
+
+.hand {
+  display: inline-block;
+  transform-origin: 75% 60%;
+  animation: wave 5s infinite ease-in-out;
+}
+
 .main {
   position: relative;
   z-index: 10;
@@ -14,9 +24,8 @@ body {
   background: $color-primary-accent;
 
   @include media($md-up) {
-    transform: translateY(-40%);
     display: table;
-    margin: 10vmax auto 0;
+    margin: 5vmax auto 0;
     font-size: $font-size-large;
     text-align: center;
   }
@@ -28,5 +37,17 @@ h1 {
 
   @include media($sm-down) {
     font-size: 1.75rem;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(25deg);
+  }
+  20% {
+    transform: rotate(0deg);
   }
 }
