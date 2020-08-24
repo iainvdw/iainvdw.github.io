@@ -50,7 +50,8 @@ strong {
 a {
   position: relative;
   z-index: 1;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   color: $color-secondary;
   fill: currentColor;
   text-decoration: none;
@@ -76,6 +77,10 @@ a {
     &::before {
       height: 100%;
     }
+  }
+
+  svg {
+    margin-right: 6px;
   }
 }
 
