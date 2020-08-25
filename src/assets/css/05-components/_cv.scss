@@ -54,5 +54,9 @@ ul {
 }
 
 .intro__inner {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+
+  @include media($md-up) {
+    font-size: 1.5rem;
+  }
 }
