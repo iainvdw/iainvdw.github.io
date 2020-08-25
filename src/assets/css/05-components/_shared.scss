@@ -30,9 +30,9 @@ h1 {
 .center-grid {
   margin-left: auto;
   margin-right: auto;
-  padding: 2vw;
+  padding: 2vw 4vw;
   min-width: 280px;
-  max-width: 90ch;
+  max-width: 100ch;
 
   @include media($md-up) {
     width: 85vw;

@@ -1,5 +1,6 @@
 @import "shared";
 
+html,
 body {
   color: $color-light;
   background: $color-primary;
@@ -14,7 +15,7 @@ h6 {
 }
 
 h3 {
-  margin-top: 5vh;
+  margin-top: 4vh;
 }
 
 ul > li {
@@ -31,6 +32,7 @@ ul {
 
 .main {
   position: relative;
+  padding-bottom: 1000px;
   z-index: 10;
   color: $color-light;
   fill: $color-light;
@@ -41,7 +43,7 @@ ul {
   }
 
   @media print {
-    margin-top: 5vw;
+    margin-top: 3vw;
   }
 }
 
@@ -51,17 +53,24 @@ ul {
   min-width: 50vw;
   background: $color-primary-accent;
 
-  @include media($sm-down) {
-    margin-top: -$spacing-base;
-    margin-left: -$spacing-base;
-    margin-right: -$spacing-base;
+  @include media($md-up) {
+    font-size: $font-size-larger;
   }
 }
 
 .intro__inner {
-  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
 
-  @include media($md-up) {
-    font-size: 1.5rem;
+  h3 {
+    margin-top: 0;
   }
+}
+
+.intro__left {
+  width: 65%;
+}
+
+.intro__right {
+  width: 30%;
 }
