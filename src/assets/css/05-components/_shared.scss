@@ -1,3 +1,7 @@
+html {
+  font-size: 0.8rem;
+}
+
 h1 {
   margin-bottom: 0;
   width: 100%;
@@ -15,9 +19,12 @@ h1,
 }
 
 .subtitle {
-  display: inline-block;
-  vertical-align: top;
-  font-size: heading-scale(5);
+  display: block;
+  font-size: 1.75rem;
+
+  @include media($md-up) {
+    font-size: heading-scale(5);
+  }
 }
 
 .center-grid {
@@ -25,7 +32,7 @@ h1,
   margin-right: auto;
   padding: $spacing-base;
   min-width: 280px;
-  max-width: 75ch;
+  max-width: 90ch;
 
   @include media($md-up) {
     width: 85vw;
@@ -50,4 +57,12 @@ h1,
   object-position: 50% 25%;
   mix-blend-mode: exclusion;
   filter: sepia(100%);
+}
+
+@media print {
+  .page-breaker {
+    display: block;
+    page-break-before: always;
+    padding-top: 50px;
+  }
 }
