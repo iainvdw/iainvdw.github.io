@@ -5,6 +5,7 @@ body {
   background: $color-primary;
 }
 
+h2,
 h3,
 h4,
 h5,
@@ -37,6 +38,10 @@ ul {
   @include media($md-up) {
     margin-top: 5vmin;
     font-size: $font-size-large;
+  }
+
+  @media print {
+    margin-top: 5vw;
   }
 }
 

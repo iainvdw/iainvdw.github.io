@@ -19,23 +19,44 @@ h6 {
 }
 
 h1 {
-  font-size: heading-scale(6);
+  font-size: heading-scale(5);
   color: $color-light;
 }
 h2 {
-  font-size: heading-scale(5);
-}
-h3 {
-  font-size: heading-scale(4);
-}
-h4 {
   font-size: heading-scale(3);
 }
+h3 {
+  font-size: heading-scale(1);
+}
+h4 {
+  font-size: heading-scale(0.9);
+}
 h5 {
-  font-size: heading-scale(2);
+  font-size: heading-scale(0.8);
 }
 h6 {
-  font-size: heading-scale(1);
+  font-size: heading-scale(0.7);
+}
+
+@include media($md-up) {
+  h1 {
+    font-size: heading-scale(8);
+  }
+  h2 {
+    font-size: heading-scale(5);
+  }
+  h3 {
+    font-size: heading-scale(4);
+  }
+  h4 {
+    font-size: heading-scale(3);
+  }
+  h5 {
+    font-size: heading-scale(2);
+  }
+  h6 {
+    font-size: heading-scale(1);
+  }
 }
 
 p {

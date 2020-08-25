@@ -2,25 +2,25 @@ html {
   font-size: 0.8rem;
 }
 
-h1 {
-  margin-bottom: 0;
-  width: 100%;
-  font-size: 2rem;
-
-  @include media($md-up) {
-    font-size: 4rem;
-  }
-}
-
 h1,
 .subtitle {
   position: relative;
   color: $color-light;
 }
 
+h1 {
+  margin-bottom: 0;
+  width: 100%;
+  font-size: heading-scale(5);
+
+  @include media($md-up) {
+    font-size: heading-scale(8);
+  }
+}
+
 .subtitle {
   display: block;
-  font-size: 1.75rem;
+  font-size: heading-scale(3);
 
   @include media($md-up) {
     font-size: heading-scale(5);
@@ -30,7 +30,7 @@ h1,
 .center-grid {
   margin-left: auto;
   margin-right: auto;
-  padding: $spacing-base;
+  padding: 2vw;
   min-width: 280px;
   max-width: 90ch;
 
