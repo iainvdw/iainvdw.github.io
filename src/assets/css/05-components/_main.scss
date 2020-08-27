@@ -1,7 +1,11 @@
 html,
 body {
   height: 100%;
-  background: $color-primary;
+  background: $color-primary-accent;
+
+  @include media($md-up) {
+    background: $color-primary;
+  }
 }
 
 .hi {
@@ -22,23 +26,14 @@ body {
   min-width: 50vw;
   color: $color-light;
   fill: $color-light;
-  box-shadow: 0 3px 3px rgba($color-dark, 0.2);
-  background: $color-primary-accent;
 
   @include media($md-up) {
     display: table;
-    margin: 5vmax auto 0;
+    margin: 5vmax auto;
     font-size: $font-size-large;
     text-align: center;
-  }
-}
-
-h1 {
-  position: relative;
-  display: inline-block;
-
-  @include media($sm-down) {
-    font-size: 1.75rem;
+    box-shadow: 0 3px 3px rgba($color-dark, 0.2);
+    background: $color-primary-accent;
   }
 }
 

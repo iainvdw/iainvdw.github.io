@@ -53,6 +53,12 @@ ul {
   min-width: 50vw;
   background: $color-primary-accent;
 
+  @include media($sm-down) {
+    margin-top: -2vw;
+    margin-left: -4vw;
+    margin-right: -4vw;
+  }
+
   @include media($md-up) {
     font-size: $font-size-larger;
   }

@@ -44,6 +44,11 @@ h1 {
   padding: 15vw 0;
   color: $color-light;
   text-shadow: 0 0 1rem $color-primary, 0 0 0.5rem $color-primary, 0 0 0.25rem $color-primary;
+  background: $color-primary;
+
+  @include media($xl-up) {
+    padding: 12vw 0;
+  }
 }
 
 .header__image {
@@ -54,7 +59,7 @@ h1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 25%;
+  object-position: 50% 20%;
   mix-blend-mode: exclusion;
   filter: sepia(100%);
 }
